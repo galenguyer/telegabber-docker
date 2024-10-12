@@ -2,16 +2,17 @@
 
 You can now connect all your retro or non standard OS machines to telegram. The setup works on any operating system with XMPP/Jabber supported IM client. You will need spare server or RaspberryPI for this software to run. It will bridge your xmpp connections to telegram.
 
-# Prepare dns
+## Prepare dns
 
 You should setup two dns'es:
 * `<maindomain.com>` -> main domain for your xmpp service
 * `<media.maindomain.com>` -> host that will be used for media sharing	
-For my local intranet i set up these:
+
+For my local intranet I set up these:
 * `xmpp.lan` -> you will also need declare it on `.env` file param `MAIN_HOST`
 * `media.xmpp.lan` -> you will also need to declare it on `.env` file param `LINK_HOST`
 
-# Run
+## Run
 
 * Move example environment file: `mv .env-example .env` 
 * Edit `.env` file values to suit your needs, Change `MAIN_HOST` and `LINK_HOST` to your corresponding dns setup. Also don't forget to set `API_ID` and `API_HASH` you will get them from https://my.telegram.org/apps
@@ -21,7 +22,7 @@ For my local intranet i set up these:
 
 Else will be generated automatically..
 
-# Client side
+## Client side
 
 After running docker container connect, register and authenticate:
 
