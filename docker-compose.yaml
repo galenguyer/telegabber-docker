@@ -15,5 +15,9 @@ services:
             FILES_HOST: ${FILES_HOST}
             TZ: "America/Denver"
         volumes:
-            - "./data/prosody/data:/var/lib/prosody"
-            - "./data/prosody/sessions:/sessions"
+            - "telegabber-data:/var/lib/prosody"
+            - "telegabber-sessions:/sessions"
+
+volumes:
+    telegabber-data:
+    telegabber-sessions:
