@@ -5,7 +5,7 @@ group "default" {
     targets = ["telegabber"]
 }
 
-target "alpine-mainline" {
+target "telegabber" {
     args = {
         CORE_COUNT="${CORE_COUNT}"
     }
