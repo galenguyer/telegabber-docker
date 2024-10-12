@@ -1,7 +1,6 @@
-version: '2'
 services:
     telegabber:
-        image: nulldevil/telegabber:latest
+        image: docker.io/galenguyer/telegabber:latest
         container_name: telegabber
         ports:
             - "5222:5222"
@@ -14,7 +13,7 @@ services:
             MAIN_HOST: ${MAIN_HOST}
             LINK_HOST: ${LINK_HOST}
             FILES_HOST: ${FILES_HOST}
-            TZ: "Europe/Vilnius"
+            TZ: "America/Denver"
         volumes:
             - "./data/prosody/data:/var/lib/prosody"
             - "./data/prosody/sessions:/sessions"

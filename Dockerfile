@@ -3,13 +3,13 @@ MAINTAINER justinas@eofnet.lt
 WORKDIR /root/
 
 
-RUN apt-get update && ln -fs /usr/share/zoneinfo/Europe/Vilnius /etc/localtime && \
+RUN apt-get update && \
    DEBIAN_FRONTEND=noninteractive apt-get install -y prosody nginx supervisor
 
 # copy init
 COPY files/init.sh /init.sh
 # copy supervisor conf
-COPY files/supervisor-telegabber.conf /etc/supervisor/conf.d//supervisor-telegabber.conf
+COPY files/supervisor-telegabber.conf /etc/supervisor/conf.d/supervisor-telegabber.conf
 # copy libs and files from libs image
 COPY --from=telegabber-libs:latest /usr/local/lib/libtd* /usr/local/lib/
 COPY --from=telegabber-libs:latest /usr/local/lib/pkgconfig/td* /usr/local/lib/pkgconfig/
