@@ -33,7 +33,7 @@ core_count="${CORE_COUNT:-$(nproc)}"
 echo "using $core_count cores..." >&2
 
 # create docker images
-export DEBIAN_VER="$debian"
+#export DEBIAN_VER="$debian"
 export CORE_COUNT="$core_count"
 export REGISTRY="$registry"
 docker buildx bake \
